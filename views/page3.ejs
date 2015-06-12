@@ -1,0 +1,67 @@
+<div class="content3 cl">
+    <div class="content3-1">
+	    <h2 style="font-size: 36px; color: red;">系統架構</h2>
+		<img src="/img/SystemArchitecture.png" style="float: left; margin-right: 20px;">
+		<p style="font-size: 18px; margin-left: 10px;">
+		   本系統主要分成四大模組，分別為CPR人形模組、感測模組、顯示模組、無線傳輸模組及中央計算模組，其架構圖如左圖所示。
+		</p>
+		<br>
+		<p style="font-size: 18px; margin-left: 10px;">
+		   其中CPR人形模組則是使用安妮來進行CPR操作；感測模組主要是感測使用者有無正確按壓至正確位置；顯示模組是負責顯示教學與相關訊息，像是目前所在的步驟、胸外按壓太快或是太慢和頻率等；無線傳輸模組是將中央計算模組裡所有資料傳到顯示模組上；最後中央計算模組是負責將所有感測器的資料加以整合計算。
+		</p>
+	</div>
+	<div class="content3-2">
+	    <h2 style="font-size: 36px; color: red;">CPR人型模組</h2>
+	    <img src="/img/CPRAnnie.png" style="float: left; margin-right: 20px;">
+		<p style="font-size: 18px; margin-left: 10px;">
+		   在此項模組研究中，我們使用CPR標準模型(安妮)來實作，左圖，安妮本是個十二歲的小女孩，不幸因溺水身亡，安妮的爸爸是個經營玩具工廠的醫生，傷痛之餘，決定要工廠生產模型人體，藉由此廣為推廣CPR，讓更多的人得到拯救，為紀念她的女兒，才將模型人體取名為安妮。安妮的特徵有：氣道自動關閉、領部可以活動、類似真人的胸部按壓手感、做人工呼吸時胸腔能自然收縮、符合人體構造比例。藉此模擬真實的情況，讓施加的力度能更準確拿捏，使使用者掌握到CPR的訣竅。安妮的主要構造分為呼吸道和胸腔，呼吸道包括鼻腔和口部，學習急救的人只需要將它的頭往後仰，用正確的方式吹氣，安妮的胸腔就會充氣膨脹；然後在正確的位置按壓胸部，使胸腔的氣體排出，以達到心肺復甦的效果，藉此學習CPR。
+		</p>
+	</div>
+	<div class="content3-3">
+	    <h2 style="font-size: 36px; color: red;">感測模組</h2>
+	    <div style="width: 450px; height: 650px; float: left;">
+		    <img src="/img/button.png" style="float: left; margin-right: 20px; margin-left: 30px;">
+		    <img src="/img/force.png" style="margin-right: 20px; margin-left: 50px;">
+		    <img src="/img/atmosphere.png" style="float: left; margin-right: 10px;">
+		    <img src="/img/head.png" style="float: left; margin-right: 10px;">
+			<img src="/img/AllSensor.png" style="float: left; margin-right: 20px; margin-top: 50px;">
+		</div>
+		<p style="font-size: 18px; margin-left: 10px;">
+		   在此項模組研究中，我們使用了按鈕、壓力感測器、氣壓感測器及加速度陀螺儀，這些感測器是用來判斷使用者有無做出正確的步驟與方法，以利我們寫程式判斷。按鈕安裝在安妮的兩邊肩膀上，為了能感測使用者是否有做拍肩這動作，以觸發下個步驟，其感測器如左上圖所示。壓力感測器裝在兩乳連線胸骨上方，胸部按壓需施力到一個力度，才能算壓一下，壓到30下後進入下個步驟，其感測器如右上圖所示。氣壓感測器裝在胸腔裡，以感測使用者有無吹氣進去，吹氣的力度須大到可以鼓起胸腔，其感測器如左下圖所示。加速度陀螺儀安裝在喉嚨裡，感測使用者有無把輔具做壓額抬下巴這動作，做這動作後才會啟動氣壓感測器，如果沒此動作的話，感測器將維持關閉狀態，其感測器如圖右下所示。
+		</p>
+		<br><br><br><br>
+		<p style="font-size: 18px; margin-left: 10px;">
+		   我們將上述感測器安裝於安妮身上，如左圖所示，標示彩色部分為安妮身上的感測器位置，紅圈處是兩個按鈕的位置，放置在肩膀上；藍圈處是放置加速度陀螺儀的位置，放置在喉嚨裡；綠圈處是放置壓力感測器，放置在兩乳連線中間胸骨上；黑圈處則是大氣壓力感測器，放置在胸腔裡。
+		</p>
+	</div>
+	<div class="content3-4">
+	    <h2 style="font-size: 36px; color: red;">顯示模組</h2>
+		<div style="float: left; width: 400px; height: 250px; margin-right: 20px;">
+		   <img src="/img/Layout.png" style="margin-right: 20px;">
+		</div>
+		<p style="font-size: 18px; margin-left: 10px;">
+		   在此項模組研究中，我們使用C#來做介面顯示，介面會顯示全部的資訊，像是目前所在的步驟、使用者按壓心臟的頻率、使用者胸外按壓心臟太快或是太慢及使用者按壓心臟的次數，方便使用者觀看，如左圖所示。
+		</p>
+	</div>
+	<div class="content3-5">
+	    <h2 style="font-size: 36px; color: red;">無線傳輸模組</h2>
+		<img src="/img/BluetoothV3Pic.png" style="float: left; margin-right: 20px;">
+		<p style="font-size: 18px; margin-left: 10px;">
+		   在此項模組研究中，我們使用藍芽傳輸技術來做傳輸，左圖為其藍芽模組示意圖。從中央計算模組整合的資料，會透過無線傳輸來把資料傳給顯示模組，顯示模組再顯示其接收到的資料。
+		</p>
+	</div>
+	<div class="content3-6">
+	    <h2 style="font-size: 36px; color: red;">中央計算模組</h2>
+		<img src="/img/ArduinoMega.png" style="float: left; margin-right: 20px;">
+		<p style="font-size: 18px; margin-left: 10px;">
+		   在此項模組研究中，我們使用Arduino MEGA 2560 R3板子來當做整個教學輔具的核心，如左圖所示，他會接收來自各個的感測器所得到的資料，加以計算整合，最後透過無線傳輸給顯示模組，以得知使用者的資訊。
+		</p>
+	</div>
+	<div class="content3-7">
+	    <h2 style="font-size: 36px; color: red;">系統整合</h2>
+		<img src="/img/SystemIntegration.png" style="float: left; margin-right: 20px;">
+		<p style="font-size: 18px; margin-left: 10px;">
+		   在此項研究計畫中，使用者觀看C#介面上的所顯示的步驟，選擇了步驟後會使用影片來示範給使用者看，看完後使用者在對人偶進行動作一次，如果使用者做正確的動作，則介面會自動跳至下個步驟，當心臟按壓時會顯示使用者按壓的頻率，若使用者按壓太快或太慢時系統都會提醒。
+		</p>
+	</div>
+</div>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link href="/stylesheets/bootstrap.css" rel="stylesheet"/>
+<link href="/stylesheets/bootstrap-reponsive.css" rel="stylesheet"/>
+<style>
+body
+{
+    padding-top: 60px;
+	padding-bottom: 40px;
+}
+.container
+{
+    width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="/">專題討論區</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li class="active"><a href="/">首頁</a></li>
+					<% if (loginStatus) { %>
+						<li><a href="/logout">登出</a></li>
+					<% } else{ %>
+						<li><a href="/login">登入</a></li>
+						<li><a href="/reg">註冊</a></li>
+					<% } %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div>
+   <div id="left" class="cl">
+      <table>
+         <tr>
+	        <th class="first"><a href="/" style="color: white;">首頁</a></th>
+	     </tr>
+		 <tr>
+		    <th class="second"><a href="/page2">簡介</a></th>
+		 </tr>
+		 <tr>
+		    <th class="third"><a href="/page3">系統</a></th>
+		 </tr>
+		 <tr>
+		    <th class="forth"><a href="/page4">工具</a></th>
+		 </tr>
+		 <tr>
+		    <th class="fifth"><a href="/page5">成果</a></th>
+		 </tr>
+		 <tr>
+		    <th class="sixth"><a href="/page6">結論</a></th>
+		 </tr>
+		 <tr>
+		    <th class="seventh"><a href="/page7">心得</a></th>
+		 </tr>
+      </table>
+   </div>
+</div>
+<div id="container" class="container">
+	<%- body %>
+	<hr />
+	<footer>
+	</footer>
+</div>
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+</body>
+</html>
